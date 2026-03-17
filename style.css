@@ -415,10 +415,7 @@ font-size:40px;
 margin-bottom:30px;
 }
 
-.home-img img{
-width:320px;
-height:320px;
-}
+
 
 section{
 padding:40px;
@@ -473,10 +470,7 @@ margin-bottom:20px;
 font-size:15px;
 }
 
-.home-img img{
-width:260px;
-height:260px;
-}
+
 
 .btn{
 font-size:14px;
@@ -522,10 +516,7 @@ overflow-x:hidden;
 font-size:26px;
 }
 
-.home-img img{
-width:200px;
-height:200px;
-}
+
 
 .btn{
 font-size:13px;
@@ -538,6 +529,72 @@ width:100%;
 
 .project-card{
 width:100%;
+}
+
+}
+
+/* ===== FINAL RESPONSIVE FIX ===== */
+
+/* Fix white space / half screen issue */
+html, body{
+width:100%;
+overflow-x:hidden;
+}
+
+/* Prevent elements from breaking layout */
+*{
+box-sizing:border-box;
+}
+
+/* Fix main sections width */
+.home,
+#about,
+#skills,
+#projects,
+#contact{
+width:100%;
+max-width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* Fix image overflow */
+.home-img img{
+max-width:75%;
+height:auto;
+}
+
+/* Fix container padding on small screens */
+@media (max-width: 768px){
+
+.home,
+#about,
+#skills,
+#projects,
+#contact{
+padding-left:5%;
+padding-right:5%;
+}
+
+/* prevent extra spacing */
+section{
+margin:10px 5px;
+}
+
+/* fix cards overflow */
+.skill-card,
+.project-card{
+max-width:100%;
+}
+
+/* fix navbar overflow */
+nav{
+flex-wrap:wrap;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
 }
 
 }
